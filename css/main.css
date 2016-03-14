@@ -916,7 +916,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  /* background: #222; 去掉背景色*/
 }
 .site-meta {
   margin: 0;
