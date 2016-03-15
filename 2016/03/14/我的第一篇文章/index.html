@@ -62,8 +62,8 @@
 <meta name="description" content="原书如下:
 调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。
 
-而我对下面的代码进行测试的结果却是:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
-期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;">
+于是我对下面的代码进行测试:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
+期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;NaN&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于javasript高级程序设计第五章Array类型的valueOf()方法">
 <meta property="og:url" content="http://yoursite.com/2016/03/14/我的第一篇文章/index.html">
@@ -71,16 +71,16 @@
 <meta property="og:description" content="原书如下:
 调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。
 
-而我对下面的代码进行测试的结果却是:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
-期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;">
-<meta property="og:updated_time" content="2016-03-15T10:35:32.282Z">
+于是我对下面的代码进行测试:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
+期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;NaN&amp;">
+<meta property="og:updated_time" content="2016-03-15T10:48:54.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于javasript高级程序设计第五章Array类型的valueOf()方法">
 <meta name="twitter:description" content="原书如下:
 调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。
 
-而我对下面的代码进行测试的结果却是:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
-期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;">
+于是我对下面的代码进行测试:12var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]console.log(a.valueOf());
+期望的结果是：1[,, &amp;quot;true&amp;quot;, &amp;quot;NaN&amp;">
 
 
 
@@ -270,7 +270,7 @@
         <h6 id="原书如下"><a href="#原书如下" class="headerlink" title="原书如下:"></a>原书如下:</h6><blockquote>
 <p>调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。</p>
 </blockquote>
-<h6 id="而我对下面的代码进行测试的结果却是"><a href="#而我对下面的代码进行测试的结果却是" class="headerlink" title="而我对下面的代码进行测试的结果却是:"></a>而我对下面的代码进行测试的结果却是:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = [undefined, null, true, NaN, 0, &quot;red&quot;]</span><br><span class="line">console.log(a.valueOf());</span><br></pre></td></tr></table></figure>
+<h6 id="于是我对下面的代码进行测试"><a href="#于是我对下面的代码进行测试" class="headerlink" title="于是我对下面的代码进行测试:"></a>于是我对下面的代码进行测试:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = [undefined, null, true, NaN, 0, &quot;red&quot;]</span><br><span class="line">console.log(a.valueOf());</span><br></pre></td></tr></table></figure>
 <h6 id="期望的结果是："><a href="#期望的结果是：" class="headerlink" title="期望的结果是："></a>期望的结果是：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[,, &quot;true&quot;, &quot;NaN&quot;, &quot;0&quot;, &quot;red&quot;]</span><br></pre></td></tr></table></figure>
 <h6 id="结果是："><a href="#结果是：" class="headerlink" title="结果是："></a>结果是：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[undefined, null, true, NaN, 0, &quot;red&quot;]</span><br></pre></td></tr></table></figure>
 <p>问题出在哪里呢？只有等对valueOf()足够了解再回头来看了，先记录下</p>
@@ -422,7 +422,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#原书如下"><span class="nav-number">1.</span> <span class="nav-text">原书如下:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#而我对下面的代码进行测试的结果却是"><span class="nav-number">2.</span> <span class="nav-text">而我对下面的代码进行测试的结果却是:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#期望的结果是："><span class="nav-number">3.</span> <span class="nav-text">期望的结果是：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#结果是："><span class="nav-number">4.</span> <span class="nav-text">结果是：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#原书如下"><span class="nav-number">1.</span> <span class="nav-text">原书如下:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#于是我对下面的代码进行测试"><span class="nav-number">2.</span> <span class="nav-text">于是我对下面的代码进行测试:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#期望的结果是："><span class="nav-number">3.</span> <span class="nav-text">期望的结果是：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#结果是："><span class="nav-number">4.</span> <span class="nav-text">结果是：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
