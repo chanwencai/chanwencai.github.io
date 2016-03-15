@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-14T15:53:36.909Z</updated>
+  <updated>2016-03-15T10:35:32.282Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇文章</title>
+    <title>关于javasript高级程序设计第五章Array类型的valueOf()方法</title>
     <link href="http://yoursite.com/2016/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
     <id>http://yoursite.com/2016/03/14/我的第一篇文章/</id>
     <published>2016-03-14T15:53:36.000Z</published>
-    <updated>2016-03-14T15:53:36.909Z</updated>
+    <updated>2016-03-15T10:35:32.282Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;h6 id=&quot;原书如下&quot;&gt;&lt;a href=&quot;#原书如下&quot; class=&quot;headerlink&quot; title=&quot;原书如下:&quot;&gt;&lt;/a&gt;原书如下:&lt;/h6&gt;&lt;blockquote&gt;
+&lt;p&gt;调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&quot;而我对下面的代码进行测试的结果却是&quot;&gt;&lt;a href=&quot;#而我对下面的代码进行测试的结果却是&quot; class=&quot;headerlink&quot; title=&quot;而我对下面的代码进行测试的结果却是:&quot;&gt;&lt;/a&gt;而我对下面的代码进行测试的结果却是:&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;console.log(a.valueOf());&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h6 id=&quot;期望的结果是：&quot;&gt;&lt;a href=&quot;#期望的结果是：&quot; class=&quot;headerlink&quot; title=&quot;期望的结果是：&quot;&gt;&lt;/a&gt;期望的结果是：&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[,, &amp;quot;true&amp;quot;, &amp;quot;NaN&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h6 id=&quot;结果是：&quot;&gt;&lt;a href=&quot;#结果是：&quot; class=&quot;headerlink&quot; title=&quot;结果是：&quot;&gt;&lt;/a&gt;结果是：&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;问题出在哪里呢？只有等对valueOf()足够了解再回头来看了，先记录下&lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;h6 id=&quot;原书如下&quot;&gt;&lt;a href=&quot;#原书如下&quot; class=&quot;headerlink&quot; title=&quot;原书如下:&quot;&gt;&lt;/a&gt;原书如下:&lt;/h6&gt;&lt;blockquote&gt;
+&lt;p&gt;调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toStri
+    
     </summary>
     
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
