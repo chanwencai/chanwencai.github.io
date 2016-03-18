@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-15T10:52:30.544Z</updated>
+  <updated>2016-03-18T10:38:53.761Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,32 +16,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>关于javasript高级程序设计第五章Array类型的valueOf()方法</title>
-    <link href="http://yoursite.com/2016/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2016/03/14/我的第一篇文章/</id>
-    <published>2016-03-14T15:53:36.000Z</published>
-    <updated>2016-03-15T10:52:30.544Z</updated>
+    <title>元素的嵌套规则</title>
+    <link href="http://yoursite.com/2016/03/18/%E5%85%83%E7%B4%A0%E7%9A%84%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/"/>
+    <id>http://yoursite.com/2016/03/18/元素的嵌套规则/</id>
+    <published>2016-03-18T10:30:32.000Z</published>
+    <updated>2016-03-18T10:38:53.761Z</updated>
     
-    <content type="html">&lt;h6 id=&quot;原书如下&quot;&gt;&lt;a href=&quot;#原书如下&quot; class=&quot;headerlink&quot; title=&quot;原书如下:&quot;&gt;&lt;/a&gt;原书如下:&lt;/h6&gt;&lt;blockquote&gt;
-&lt;p&gt;调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toString()方法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&quot;于是我对下面的代码进行测试&quot;&gt;&lt;a href=&quot;#于是我对下面的代码进行测试&quot; class=&quot;headerlink&quot; title=&quot;于是我对下面的代码进行测试:&quot;&gt;&lt;/a&gt;于是我对下面的代码进行测试:&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var a = [undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;console.log(a.valueOf());&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h6 id=&quot;期望的结果是：&quot;&gt;&lt;a href=&quot;#期望的结果是：&quot; class=&quot;headerlink&quot; title=&quot;期望的结果是：&quot;&gt;&lt;/a&gt;期望的结果是：&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[,, &amp;quot;true&amp;quot;, &amp;quot;NaN&amp;quot;, &amp;quot;0&amp;quot;, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h6 id=&quot;结果是：&quot;&gt;&lt;a href=&quot;#结果是：&quot; class=&quot;headerlink&quot; title=&quot;结果是：&quot;&gt;&lt;/a&gt;结果是：&lt;/h6&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[undefined, null, true, NaN, 0, &amp;quot;red&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;问题出在哪里呢？只有等对valueOf()足够了解再回头来看了，先记录下&lt;/p&gt;
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;块级元素可以包含内联元素或某些块级元素，但内联元素却不能包含块元素，只能包含其它的内联元素；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有几个特殊的块级元素只能包含内联元素，不能再包含块级元素：h1、h2、h3、h4、h5、h6、p、dt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;a元素不能嵌套a\input\select元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ul里面直接后代跟li；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h6 id=&quot;原书如下&quot;&gt;&lt;a href=&quot;#原书如下&quot; class=&quot;headerlink&quot; title=&quot;原书如下:&quot;&gt;&lt;/a&gt;原书如下:&lt;/h6&gt;&lt;blockquote&gt;
-&lt;p&gt;调用valueOf()返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的toStri
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;块级元素可以包含内联元素或某些块级元素，但内联元素却不能包含块元素，只能包含其它的内联元素；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有几个特殊的块级元素只能包含内联元素，不能再包含块级元素：h1、h2、h3、h4、h5、h6、p、dt&lt;/p&gt;
+&lt;/li&gt;
+&lt;l
     
     </summary>
     
-      <category term="javascropt" scheme="http://yoursite.com/categories/javascropt/"/>
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>元素的分类及其区别</title>
+    <link href="http://yoursite.com/2016/03/18/%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E5%85%B6%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2016/03/18/元素的分类及其区别/</id>
+    <published>2016-03-18T10:24:35.000Z</published>
+    <updated>2016-03-18T10:38:47.202Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;替换元素与非替换元素&quot;&gt;&lt;a href=&quot;#替换元素与非替换元素&quot; class=&quot;headerlink&quot; title=&quot;替换元素与非替换元素&quot;&gt;&lt;/a&gt;替换元素与非替换元素&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;替换元素(replaced element)是指用来替换元素内容的部分并非由文档内容直接显示；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;如img、input。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;大部分元素都属于非替换元素；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;块级元素与行内元素&quot;&gt;&lt;a href=&quot;#块级元素与行内元素&quot; class=&quot;headerlink&quot; title=&quot;块级元素与行内元素&quot;&gt;&lt;/a&gt;块级元素与行内元素&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; 块级元素会生成一个元素框，(默认地)它会填充其父元素的内容区，旁边不能有其他元素；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;行内元素在一个文本行内生成元素框，而不会打断这行文本；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;块级元素与行内元素可通过display设置替换；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;三者区别&quot;&gt;&lt;a href=&quot;#三者区别&quot; class=&quot;headerlink&quot; title=&quot;三者区别&quot;&gt;&lt;/a&gt;三者区别&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内元素无法设置宽高；设置上下padding/margin有背景，但是不占位置，可用行高设置高度；设置左右padding有效；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;替换元素可以显式设置宽高，但会在行内排行；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;替换元素与非替换元素&quot;&gt;&lt;a href=&quot;#替换元素与非替换元素&quot; class=&quot;headerlink&quot; title=&quot;替换元素与非替换元素&quot;&gt;&lt;/a&gt;替换元素与非替换元素&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+      <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
