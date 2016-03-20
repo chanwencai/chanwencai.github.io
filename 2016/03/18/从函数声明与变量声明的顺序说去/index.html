@@ -59,19 +59,16 @@
 
 
 
-<meta name="description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；12345console.log(func1);var func1;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)function func1()&amp;#123;	return 0;&amp;#125;
-这">
+<meta name="description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；123456console.log(func1);var func1;function func1()&amp;#123;	return 0;&amp;#125;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从函数声明与变量声明的顺序说去">
 <meta property="og:url" content="http://yoursite.com/2016/03/18/从函数声明与变量声明的顺序说去/index.html">
 <meta property="og:site_name" content="陈文才的博客">
-<meta property="og:description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；12345console.log(func1);var func1;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)function func1()&amp;#123;	return 0;&amp;#125;
-这">
-<meta property="og:updated_time" content="2016-03-20T04:49:22.669Z">
+<meta property="og:description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；123456console.log(func1);var func1;function func1()&amp;#123;	return 0;&amp;#125;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)">
+<meta property="og:updated_time" content="2016-03-20T05:22:05.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从函数声明与变量声明的顺序说去">
-<meta name="twitter:description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；12345console.log(func1);var func1;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)function func1()&amp;#123;	return 0;&amp;#125;
-这">
+<meta name="twitter:description" content="我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；123456console.log(func1);var func1;function func1()&amp;#123;	return 0;&amp;#125;//结果第二行会报错:&quot;Identifier &apos;func1&apos; has already been declared&quot;(标识符已经被声明了)">
 
 
 
@@ -267,7 +264,7 @@
       
 
       
-        <p>我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(func1);</span><br><span class="line"><span class="keyword">var</span> func1;<span class="comment">//结果第二行会报错:"Identifier 'func1' has already been declared"(标识符已经被声明了)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(func1);</span><br><span class="line"><span class="keyword">var</span> func1;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果第二行会报错:"Identifier 'func1' has already been declared"(标识符已经被声明了)</span></span><br></pre></td></tr></table></figure></p>
 <p>这说明了，函数的定义是在变量的声明前的；<br>而且标识符被定义为函数后不能被再被声明，除非再被定义为另一个函数；如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这是可以运行的；</span></span><br></pre></td></tr></table></figure></p>
 
       

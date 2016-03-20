@@ -270,7 +270,7 @@
       
         
           
-            <p>我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(func1);</span><br><span class="line"><span class="keyword">var</span> func1;<span class="comment">//结果第二行会报错:"Identifier 'func1' has already been declared"(标识符已经被声明了)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <p>我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(func1);</span><br><span class="line"><span class="keyword">var</span> func1;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果第二行会报错:"Identifier 'func1' has already been declared"(标识符已经被声明了)</span></span><br></pre></td></tr></table></figure></p>
 <p>这说明了，函数的定义是在变量的声明前的；<br>而且标识符被定义为函数后不能被再被声明，除非再被定义为另一个函数；如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这是可以运行的；</span></span><br></pre></td></tr></table></figure></p>
 
           
@@ -496,9 +496,16 @@
       
         
           
-            <h3 id="替换元素与非替换元素"><a href="#替换元素与非替换元素" class="headerlink" title="替换元素与非替换元素"></a>替换元素与非替换元素</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">替换元素(replaced element)是指用来替换元素内容的部分并非由文档内容直接显示；如img、input。</span><br><span class="line">大部分元素都属于非替换元素；</span><br></pre></td></tr></table></figure>
-<h3 id="块级元素与行内元素"><a href="#块级元素与行内元素" class="headerlink" title="块级元素与行内元素"></a>块级元素与行内元素</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">块级元素会生成一个元素框，(默认地)它会填充其父元素的内容区，旁边不能有其他元素；</span><br><span class="line">行内元素在一个文本行内生成元素框，而不会打断这行文本；</span><br><span class="line">块级元素与行内元素可通过display设置替换；</span><br></pre></td></tr></table></figure>
-<h3 id="三者区别"><a href="#三者区别" class="headerlink" title="三者区别"></a>三者区别</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">行内元素无法设置宽高；设置上下padding/margin有背景，但是不占位置，可用行高设置高度；设置左右padding有效；</span><br><span class="line">替换元素可以显式设置宽高，但会在行内排行；</span><br></pre></td></tr></table></figure>
+            <h3 id="替换元素与非替换元素"><a href="#替换元素与非替换元素" class="headerlink" title="替换元素与非替换元素"></a>替换元素与非替换元素</h3><blockquote>
+<p>替换元素(replaced element)是指用来替换元素内容的部分并非由文档内容直接显示；如img、input。<br>大部分元素都属于非替换元素；</p>
+</blockquote>
+<h3 id="块级元素与行内元素"><a href="#块级元素与行内元素" class="headerlink" title="块级元素与行内元素"></a>块级元素与行内元素</h3><blockquote>
+<p>块级元素会生成一个元素框，(默认地)它会填充其父元素的内容区，旁边不能有其他元素；<br>行内元素在一个文本行内生成元素框，而不会打断这行文本；<br>块级元素与行内元素可通过display设置替换；</p>
+</blockquote>
+<h3 id="三者区别"><a href="#三者区别" class="headerlink" title="三者区别"></a>三者区别</h3><blockquote>
+<p>行内元素无法设置宽高；设置上下padding/margin有背景，但是不占位置，可用行高设置高度；设置左右padding有效；<br>替换元素可以显式设置宽高，但会在行内排行；</p>
+</blockquote>
+
           
         
       
