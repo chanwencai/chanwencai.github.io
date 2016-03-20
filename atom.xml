@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-20T05:22:05.936Z</updated>
+  <updated>2016-03-20T05:30:19.411Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/18/%E4%BB%8E%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%AF%B4%E5%8E%BB/"/>
     <id>http://yoursite.com/2016/03/18/从函数声明与变量声明的顺序说去/</id>
     <published>2016-03-18T15:22:03.000Z</published>
-    <updated>2016-03-20T05:22:05.936Z</updated>
+    <updated>2016-03-20T05:30:19.411Z</updated>
     
     <content type="html">&lt;p&gt;我们知道，在函数被定义，跟变量声明会被提升，但是到底谁在前呢？为了弄清楚这个问题我做了如下测试，并发现了另一个问题；&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(func1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; func1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//结果第二行会报错:&quot;Identifier &#39;func1&#39; has already been declared&quot;(标识符已经被声明了)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;这说明了，函数的定义是在变量的声明前的；&lt;br&gt;而且标识符被定义为函数后不能被再被声明，除非再被定义为另一个函数；如下：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//这是可以运行的；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2016/03/18/%E5%85%83%E7%B4%A0%E7%9A%84%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99/"/>
     <id>http://yoursite.com/2016/03/18/元素的嵌套规则/</id>
     <published>2016-03-18T10:30:32.000Z</published>
-    <updated>2016-03-18T10:42:48.466Z</updated>
+    <updated>2016-03-20T05:30:09.122Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;块级元素可以包含内联元素或某些块级元素，但内联元素却不能包含块元素，只能包含其它的内联元素；&lt;/p&gt;
@@ -81,7 +81,7 @@
     <link href="http://yoursite.com/2016/03/18/%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E5%85%B6%E5%8C%BA%E5%88%AB/"/>
     <id>http://yoursite.com/2016/03/18/元素的分类及其区别/</id>
     <published>2016-03-18T10:24:35.000Z</published>
-    <updated>2016-03-20T05:26:04.290Z</updated>
+    <updated>2016-03-20T05:29:51.122Z</updated>
     
     <content type="html">&lt;h3 id=&quot;替换元素与非替换元素&quot;&gt;&lt;a href=&quot;#替换元素与非替换元素&quot; class=&quot;headerlink&quot; title=&quot;替换元素与非替换元素&quot;&gt;&lt;/a&gt;替换元素与非替换元素&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;替换元素(replaced element)是指用来替换元素内容的部分并非由文档内容直接显示；如img、input。&lt;br&gt;大部分元素都属于非替换元素；&lt;/p&gt;
