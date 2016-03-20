@@ -920,6 +920,8 @@ pre .javascript .function {
 #header .header-inner .site-meta {
   margin: 0;
   text-align: center;
+  background-image: url("http://7xrb9a.com1.z0.glb.clouddn.com/messishot.png");
+  background-size: cover;
 }
 @media (max-width: 767px) {
   #header .header-inner .site-meta {
@@ -1551,7 +1553,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #dfa4df;
+  background: #c863ff;
 }
 .links-of-blogroll {
   font-size: 13px;
