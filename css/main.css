@@ -1476,11 +1476,11 @@ pre .javascript .function {
   padding: 2px;
 }
 .site-author-name {
-  margin: 5px 0 0;
+  margin: 1em 0 0;
   color: #222;
 }
 .site-description {
-  margin-top: 5px;
+  margin-top: 1em;
   font-size: 13px;
   color: #999;
 }
@@ -1551,7 +1551,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9fff;
+  background: #ec224e;
 }
 .links-of-blogroll {
   font-size: 13px;
