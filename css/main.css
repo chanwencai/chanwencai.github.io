@@ -1521,7 +1521,7 @@ pre .javascript .function {
   border-radius: 4px;
 }
 .feed-link a i {
-/*color: rgb(252, 100, 35);*/
+  color: #fc6423;
   font-size: 14px;
 }
 .feed-link a:hover {
@@ -1550,7 +1550,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffff6;
+  background: #ff249f;
 }
 .links-of-blogroll {
   font-size: 13px;
