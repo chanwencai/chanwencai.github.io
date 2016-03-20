@@ -81,7 +81,7 @@
     <link href="http://yoursite.com/2016/03/18/%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E5%85%B6%E5%8C%BA%E5%88%AB/"/>
     <id>http://yoursite.com/2016/03/18/元素的分类及其区别/</id>
     <published>2016-03-18T10:24:35.000Z</published>
-    <updated>2016-03-20T05:29:51.122Z</updated>
+    <updated>2016-03-20T14:23:14.879Z</updated>
     
     <content type="html">&lt;h3 id=&quot;替换元素与非替换元素&quot;&gt;&lt;a href=&quot;#替换元素与非替换元素&quot; class=&quot;headerlink&quot; title=&quot;替换元素与非替换元素&quot;&gt;&lt;/a&gt;替换元素与非替换元素&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;替换元素(replaced element)是指用来替换元素内容的部分并非由文档内容直接显示；如img、input。&lt;br&gt;大部分元素都属于非替换元素；&lt;/p&gt;
@@ -89,9 +89,7 @@
 &lt;h3 id=&quot;块级元素与行内元素&quot;&gt;&lt;a href=&quot;#块级元素与行内元素&quot; class=&quot;headerlink&quot; title=&quot;块级元素与行内元素&quot;&gt;&lt;/a&gt;块级元素与行内元素&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;块级元素会生成一个元素框，(默认地)它会填充其父元素的内容区，旁边不能有其他元素；&lt;br&gt;行内元素在一个文本行内生成元素框，而不会打断这行文本；&lt;br&gt;块级元素与行内元素可通过display设置替换；&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;三者区别&quot;&gt;&lt;a href=&quot;#三者区别&quot; class=&quot;headerlink&quot; title=&quot;三者区别&quot;&gt;&lt;/a&gt;三者区别&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;行内元素无法设置宽高；设置上下padding/margin有背景，但是不占位置，可用行高设置高度；设置左右padding有效；&lt;br&gt;替换元素可以显式设置宽高，但会在行内排行；&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;三者区别&quot;&gt;&lt;a href=&quot;#三者区别&quot; class=&quot;headerlink&quot; title=&quot;三者区别&quot;&gt;&lt;/a&gt;三者区别&lt;/h3&gt;&lt;blockquote class=&quot;note tip&quot;&gt;&lt;br&gt;行内元素无法设置宽高；设置上下padding/margin有背景，但是不占位置，可用行高设置高度；设置左右padding有效；&lt;br&gt;替换元素可以显式设置宽高，但会在行内排行；&lt;br&gt;&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
