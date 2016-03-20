@@ -918,6 +918,8 @@ pre .javascript .function {
   height: 3px;
 }
 #header .header-inner .site-meta {
+  position: relative;
+  left: 2em;
   margin: 0;
   text-align: center;
   color: #2d2324;
@@ -1553,7 +1555,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd630;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
