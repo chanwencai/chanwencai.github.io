@@ -955,6 +955,8 @@ pre .javascript .function {
   font-weight: normal;
 }
 .site-subtitle {
+  position: relative;
+  left: 2em;
   margin-top: 10px;
   font-size: 13px;
   color: #ddd;
@@ -1554,7 +1556,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffcfff;
+  background: #ffff93;
 }
 .links-of-blogroll {
   font-size: 13px;
